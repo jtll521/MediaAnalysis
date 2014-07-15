@@ -13,6 +13,7 @@ import com.example.vocalfoldanalysis.ui.AnalysisActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.sax.StartElementListener;
 import android.util.Log;
@@ -151,6 +152,16 @@ public class MediaContainerAdapter extends BaseAdapter {
 					viewHolder.mPlayText.setText("Play");
 				}else{
 					startPlay();
+					//监听播放完成 2014.07.15
+					mediaPlayer.setOnCompletionListener(new OnCompletionListener() {
+						
+						@Override
+						public void onCompletion(MediaPlayer arg0) {
+							// TODO Auto-generated method stub
+							viewHolder.mPlayText.setText("Play");
+							mIsCurrentPlaying = false;
+						}
+					} );
 					viewHolder.mPlayText.setText("Stop");
 				}
 				
@@ -174,7 +185,7 @@ public class MediaContainerAdapter extends BaseAdapter {
 			mediaPlayer.prepare();
 			// 开始播放
 			mediaPlayer.start();
-
+		
 		} catch (IllegalArgumentException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
