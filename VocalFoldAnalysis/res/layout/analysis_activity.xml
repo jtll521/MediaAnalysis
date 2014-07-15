@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="#000" >
+
+        <com.example.vocalfoldanalysis.AnalysisView
+            android:id="@+id/visualizerView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.example.vocalfoldanalysis.AnalysisView>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="#000" >
+
+        <com.example.vocalfoldanalysis.AnalysisViewAll
+            android:id="@+id/visualizerView_all"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.example.vocalfoldanalysis.AnalysisViewAll>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0" >
+
+        <Button
+            android:id="@+id/analysis_play"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:text="Start" >
+        </Button>
+
+        <Button
+            android:id="@+id/analysis_stop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:text="Stop" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

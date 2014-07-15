@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/music_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/name_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/album_Image"
+            android:layout_toEndOf="@+id/album_Image">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="13dp"
+                android:ellipsize="end"
+        		android:singleLine="true"
+                android:text="歌曲名称"
+                android:textColor="#333333" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/name"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+        		android:singleLine="true"
+                android:text="时间"
+                android:textColor="#9c9c9c" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@+id/time"
+                android:layout_alignBottom="@+id/time"
+                android:layout_marginStart="6dp"
+                android:layout_toEndOf="@+id/time"
+                android:ellipsize="end"
+        		android:singleLine="true"
+                android:text="演唱者"
+                android:textColor="#9c9c9c"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/size"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@+id/time"
+                android:layout_alignBottom="@+id/time"
+                android:layout_marginStart="6dp"
+                android:layout_toEndOf="@+id/time"
+                android:ellipsize="end"
+        		android:singleLine="true"
+                android:text="大小"
+                android:textColor="#9c9c9c" />
+        </RelativeLayout>
+
+      <!--  <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/ring_view"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ring_view"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/ring_view2"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ring_view2"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/msm_view"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ring_msm_view"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/msm_view2"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ring_msm_view2"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/clock_view"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ring_clock_view"
+                android:visibility="gone" />
+        </LinearLayout> --> 
+
+        <ImageView
+            android:id="@+id/album_Image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ring_album_image1" />
+    </RelativeLayout>
+
+    <!-- 设置和删除按钮的布局 -->
+
+    <include
+        android:layout_alignBottom="@+id/music_layout"
+        layout="@layout/ring_local_item_set" />
+
+</RelativeLayout>

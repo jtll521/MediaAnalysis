@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/set_delete_layout"
+    android:layout_width="112dp"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/ring_set_delete_bg"
+    android:visibility="gone" >
+
+     <RelativeLayout
+        android:id="@+id/play_layout"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        >
+
+        <ImageView
+            android:id="@+id/play_image"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/ring_set_view" />
+
+        <TextView
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/play_image"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Play"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/analysis_layout"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/play_layout" >
+
+        <ImageView
+            android:id="@+id/set_image"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/ring_set_view" />
+
+        <TextView
+            android:id="@+id/set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/set_image"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Set"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
