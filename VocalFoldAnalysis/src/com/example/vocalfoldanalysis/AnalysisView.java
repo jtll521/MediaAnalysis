@@ -22,6 +22,8 @@ public class AnalysisView extends View {
 	
 	//2014.07.14
 	private List<Byte> mAllWaveData = new ArrayList<Byte>();
+	//2014.07.24 øÿ÷∆AnalysisViewAllœ‘ æ
+	private List<Byte> mAllWaveDataOnce = new ArrayList<Byte>();
 	
 	public void init(){
 		mWaveForm = null;
@@ -30,10 +32,11 @@ public class AnalysisView extends View {
 		mPaint.setColor(Color.WHITE);
 	}
 	
-	public void updateWaveformDate(byte[] waveform){
+	public void updateWaveformDate(byte[] waveform, boolean isUpdate){
 		if(waveform == null){
 			return;
 		}
+		
 		for(byte b:waveform){
 			mAllWaveData.add(b);
 		}
@@ -42,7 +45,12 @@ public class AnalysisView extends View {
 	}
 	
 	public List<Byte> getAllWaveData(){
-		return mAllWaveData;
+		//finish play, return the data
+		if(mAllWaveDataOnce != null && mAllWaveDataOnce.size() == 0){
+			mAllWaveDataOnce.addAll(mAllWaveData);
+			//Arrays.asList
+		}
+		return mAllWaveDataOnce;
 	}
 	public AnalysisView(Context context) {
 		super(context);

@@ -56,6 +56,9 @@ public class MediaContainerAdapter extends BaseAdapter {
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
+		if(mExternalMediaFile == null){
+			return 0;
+		}
 		return mExternalMediaFile.size() == 0 ? 0 : mExternalMediaFile.size();
 	}
 
